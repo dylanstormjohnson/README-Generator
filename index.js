@@ -1,10 +1,9 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 
 const init = async () => {
-
-try {
+  try {
     const data = await inquirer.prompt([
       {
         name: "firstName",
@@ -30,7 +29,15 @@ try {
         name: "languages",
         type: "checkbox",
         message: "What languages did you use?",
-        choices: ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'JQuery', 'Node.js', 'MySQL'],
+        choices: [
+          "HTML",
+          "CSS",
+          "Javascript",
+          "Bootstrap",
+          "JQuery",
+          "Node.js",
+          "MySQL",
+        ],
       },
       {
         name: "imageName",
@@ -41,7 +48,7 @@ try {
         name: "imageFileType",
         type: "list",
         message: "What file type is said image?",
-        choices: ['jpeg', 'png', 'pdf']
+        choices: ["jpeg", "png", "pdf"],
       },
       {
         name: "motivation",
@@ -71,96 +78,117 @@ try {
       {
         name: "usage",
         type: "input",
-        message: "Explain how this site is intended to be used.",
+        message: "Explain how this project is intended to be used.",
       },
       {
         name: "featureOne",
         type: "input",
-        message: "List a feature this website includes. (1/5)",
+        message: "List a feature this project includes. (1/5)",
       },
       {
         name: "featureTwo",
         type: "input",
-        message: "List a feature this website includes. (2/5)",
+        message: "List a feature this project includes. (2/5)",
       },
       {
         name: "featureThree",
         type: "input",
-        message: "List a feature this website includes. (3/5)",
+        message: "List a feature this project includes. (3/5)",
       },
       {
         name: "featureFour",
         type: "input",
-        message: "List a feature this website includes. (4/5)",
+        message: "List a feature this project includes. (4/5)",
       },
       {
         name: "featureFive",
         type: "input",
-        message: "List a feature this website includes. (5/5)",
+        message: "List a feature this project includes. (5/5)",
       },
     ]);
 
-    console.log(data);
+    // console.log(data);
+    console.log(
+      "Don't forget to edit the README to add more features, credits, a license, and more !!!!!!!!"
+    );
 
-    const { firstName, middleName, surname, title, languages, imageName, imageFileType, motivation, why, problemSolved, learned, repositoryURL, usage, featureOne, featureTwo, featureThree, featureFour, featureFive } = data;
+    const {
+      firstName,
+      middleName,
+      surname,
+      title,
+      languages,
+      imageName,
+      imageFileType,
+      motivation,
+      why,
+      problemSolved,
+      learned,
+      repositoryURL,
+      usage,
+      featureOne,
+      featureTwo,
+      featureThree,
+      featureFour,
+      featureFive,
+    } = data;
 
     const readMe = () => `
-    # <${title}>
+# <${title}>
 
-    ## Description
-    
-    - This project was made using ${languages}  I was motivated to build this project ${motivation}  It was built because ${why}  It is intended to solve the problem of ${problemSolved}  In making said project, I learned ${learned}
-    
-    ## Table of Contents
-    
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    
-    ## Installation
-    
-    - This project can be installed by visiting its GitHub repository at ${repositoryURL} and making a clone or fork of the repository.
-    
-    ## Usage
-    
-    -${usage}
+## Description
 
-    - Here is an image of the completed website's Homepage:
-    ![The Homepage in full, showing its many elements, including its buttons, navigation, and title.](assets/images/${imageName}.${imageFileType})
-    
-    ## Features
+- This project was made using ${languages}  I was motivated to build this project ${motivation}  It was built because ${why}  It is intended to solve the problem of ${problemSolved}  In making said project, I learned ${learned}
 
-    -${featureOne}
+## Table of Contents
 
-    -${featureTwo}
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-    -${featureThree}
+## Installation
 
-    -${featureFour}
+- This project can be installed by visiting its GitHub repository at ${repositoryURL} and making a clone or fork of the repository.
 
-    -${featureFive}
+## Usage
 
-    ## Credits
-    -This website was coded by ${firstName} ${middleName} ${surname}.
-    
-    -List your collaborators, if any, with links to their GitHub profiles.
-    
-    -If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-    
-    -If you followed tutorials, include links to those here as well.
-    
-    ## License
-    
-    -If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-    
-    ---
-    `;
+-${usage}
 
-    await fs.promises.writeFile('README.md', readMe())
+- Here is an image of the completed project:
+![Description of the project's image...](assets/images/${imageName}.${imageFileType})
 
-    } catch (err) {
-        console.log(err)
-    }}
+## Features
 
-init ()
+-${featureOne}
+
+-${featureTwo}
+
+-${featureThree}
+
+-${featureFour}
+
+-${featureFive}
+
+## Credits
+-This website was coded by ${firstName} ${middleName} ${surname}.
+
+-List your collaborators, if any, with links to their GitHub profiles.
+
+-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+
+-If you followed tutorials, include links to those here as well.
+
+## License
+
+-If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+
+---`;
+
+    await fs.promises.writeFile("README.md", readMe());
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+init();
