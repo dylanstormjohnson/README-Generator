@@ -138,7 +138,7 @@ const init = async () => {
 
 ## Description
 
-- This project was made using ${languages}  I was motivated to build this project ${motivation}  It was built because ${why}  It is intended to solve the problem of ${problemSolved}  In making said project, I learned ${learned}
+- This project was made using ${languages.join(", ")}.  I was motivated to build this project ${motivation}  It was built because ${why}  It is intended to solve the problem of ${problemSolved}  In making said project, I learned ${learned}
 
 ## Table of Contents
 
