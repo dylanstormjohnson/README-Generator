@@ -1,9 +1,9 @@
 
-# <README-Generator>
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+# <README_Generator>
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ## Description
 
-- This project was made using Javascript and Node.js.  I was motivated to build this project because I wanted to practice with node.js and its ability to utilize the file system on my computer.  It was built because I wanted to speed up the process of creating a README file for projects I have worked on.  It is intended to solve the problem of the extended amount of time it takes to create a README.  In making said project, I learned a basic understanding of markdown, template literals, npms, inquirer, and async functions.
+- This project was made using Javascript, Node.js.  I was motivated to build this project because (motivation).  It was built because (reason).  It is intended to solve the problem of (problem solved).  In making said project, I learned (things learned).
 
 ## Table of Contents
 
@@ -18,43 +18,54 @@
 
 ## Usage
 
--This project was intended to be used to create simple README's quickly so that the process of starting a README is sped up.
+-This project is intended to be used...
 
-- Here is an example of the completed README:
-![The README complete with formatting, etc.:](./example/README_Image.png)
+- Here is an image of the completed project:
+![Image Description](assets/images/Image_Name.pdf)
+
 
 ## Credits
 -This website was coded by Dylan Storm Johnson.
 
+-List your collaborators, if any, with links to their GitHub profiles.
+
+-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+
+-If you followed tutorials, include links to those here as well.
+
 ## License
 
--This project is listed under the GNU General Public License v3.0.  Under this license, complete source code of licensed work and modifications must be made available under the same license.  Use must also preserve copyright and license notices.  An express grant of patent rights is provided by contributors.
+-This project is listed under the Apache License 2.0.  Under this license, use must still preserve copyright and license notices.  Distribution under separate terms is allowed for licensed works, modifications, and larger works.  An express grant of patent rights is provided by contributors.
 
 ## Badges
 
-![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript) ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=node.js) 
+  ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)   ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=node.js) 
 
 ## Features
 
--Upon opening, the user is presented with a series of questions about the project the README is being made for.
+-feature 1...
 
--The questions are topical, involving the making, languages, usage, features, credits, and more of the project at hand.
+-feature 2...
 
--The questions are worded simply and invite short, quick answers which can be fleshed out later within the README that is made.
+-feature 3...
 
--An image name and file type as well as a GitHub Repository URL are prompted to further provide context within the README.
+-feature 4...
 
--The final product is a well put together README.md file capable of fulfilling the role of the project's README with minor editing.
+-feature 5...
 
 ## How to Contribute
 
--By downloading a fork of my repository on GitHub.
+-You can contribute by...
 
 -Aside from the aforementioned ways you can contribute, the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard for contribution policy.  (Please use the above guidelines for contribution and consult the Contributor Covenant on things not specified.)
 
 ## Tests
 
--This project has no tests available.
+-There are no tests for this project.
+
+-Same as before
+
+-N/A
 
 ## Questions
 
