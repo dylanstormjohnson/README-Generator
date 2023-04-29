@@ -3,7 +3,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ## Description
 
-- This project was made using HTML, CSS, Javascript, Bootstrap, JQuery, Node.js, MySQL.  I was motivated to build this project To learn more about node.js  It was built because I wanted to simplify making README's for my projects.  It is intended to solve the problem of constantly recreating the same markdown code for README's  In making said project, I learned more about node.js, markdown formatting, and command line applications.
+- This project was made using Javascript and Node.js.  I was motivated to build this project because I wanted to practice with node.js and its ability to utilize the file system on my computer.  It was built because I wanted to speed up the process of creating a README file for projects I have worked on.  It is intended to solve the problem of the extended amount of time it takes to create a README.  In making said project, I learned a basic understanding of markdown, template literals, npms, inquirer, and async functions.
 
 ## Table of Contents
 
@@ -18,20 +18,13 @@
 
 ## Usage
 
--This project is intended to be used to create professional README's
+-This project was intended to be used to create simple README's quickly so that the process of starting a README is sped up.
 
-- Here is an image of the completed project:
-![Image Description](assets/images/Test.pdf)
-
+- Here is an example of the completed README:
+![The README complete with formatting, etc.:](./example/README_Image.png)
 
 ## Credits
 -This website was coded by Dylan Storm Johnson.
-
--List your collaborators, if any, with links to their GitHub profiles.
-
--If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
--If you followed tutorials, include links to those here as well.
 
 ## License
 
@@ -39,19 +32,19 @@
 
 ## Badges
 
-![HTML](https://img.shields.io/badge/-HTML5-black?style=flat-square&logo=html5) ![CSS](https://img.shields.io/badge/-CSS3-black?style=flat-square&logo=css3) ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript) ![Bootstrap](https://img.shields.io/badge/-Bootstrap-black?style=flat-square&logo=bootstrap) ![jQuery](https://img.shields.io/badge/-jQuery-black?style=flat-square&logo=jquery) ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=node.js) ![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql)
+![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript) ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=node.js) 
 
 ## Features
 
--This project includes proffesional markdown formattind, generated with user input.
+-Upon opening, the user is presented with a series of questions about the project the README is being made for.
 
--This project uses Javascript coding to be ran in Node.js.
+-The questions are topical, involving the making, languages, usage, features, credits, and more of the project at hand.
 
--This project connects via npm to inquirer.
+-The questions are worded simply and invite short, quick answers which can be fleshed out later within the README that is made.
 
--This project created working links to both the GitHub repository and GitHub account involved with the project.
+-An image name and file type as well as a GitHub Repository URL are prompted to further provide context within the README.
 
--This project fills in information such as the writer's name, the title of the project, an image of the project's name and filetype and much more.
+-The final product is a well put together README.md file capable of fulfilling the role of the project's README with minor editing.
 
 ## How to Contribute
 
@@ -61,11 +54,7 @@
 
 ## Tests
 
--This project has no tests avaliable.
-
--N/A
-
--N/A
+-This project has no tests available.
 
 ## Questions
 
