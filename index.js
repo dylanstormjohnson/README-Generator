@@ -2,8 +2,6 @@ const fs = require("fs");
 
 const inquirer = require("inquirer");
 
-let licenseInfo = {}
-
 const init = async () => {
   try {
     const data = await inquirer.prompt([
@@ -78,9 +76,9 @@ const init = async () => {
         message: "In making said project, I learned...",
       },
       {
-        name: "repositoryURL",
+        name: "githubUsername",
         type: "input",
-        message: "What is the GitHub repository's URL?",
+        message: "What is the GitHub username?",
       },
       {
         name: "usage",
@@ -158,7 +156,7 @@ const init = async () => {
       why,
       problemSolved,
       learned,
-      repositoryURL,
+      githubUsername,
       usage,
       featureOne,
       featureTwo,
@@ -200,6 +198,32 @@ const init = async () => {
         break;
     }
 
+    var languageBadge1 = "";
+    var languageBadge2 = "";
+    var languageBadge3 = "";
+    var languageBadge4 = "";
+    var languageBadge5 = "";
+    var languageBadge6 = "";
+    var languageBadge7 = "";
+
+    for (let i = 0; i < languages.length; i++) {
+      if (languages[i] === "HTML") {
+        languageBadge1 = "![HTML](https://img.shields.io/badge/-HTML5-black?style=flat-square&logo=html5)";
+      } else if (languages[i] === "CSS"){
+        languageBadge2 = "![CSS](https://img.shields.io/badge/-CSS3-black?style=flat-square&logo=css3)";
+      } else if (languages[i] === "Javascript") {
+        languageBadge3 = "![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)";
+      } else if (languages[i] === "Bootstrap") {
+        languageBadge4 = "![Bootstrap](https://img.shields.io/badge/-Bootstrap-black?style=flat-square&logo=bootstrap)";
+      } else if (languages[i] === "JQuery") {
+        languageBadge5 = "![jQuery](https://img.shields.io/badge/-jQuery-black?style=flat-square&logo=jquery)";
+      } else if (languages[i] === "Node.js") {
+        languageBadge6 = "![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=node.js)";
+      } else if (languages[i] === "MySQL") {
+        languageBadge7 = "![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql)";
+      }
+    }
+
     const readMe = () => `
 # <${title}>
 ${licenseInfo.badge}
@@ -216,7 +240,7 @@ ${licenseInfo.badge}
 
 ## Installation
 
-- This project can be installed by visiting its GitHub repository at ${repositoryURL} and making a clone or fork of the repository.
+- This project can be installed by visiting its GitHub repository at [Repository link](https://github.com/${githubUsername}/${title}) and making a clone or fork of the repository.
 
 ## Usage
 
@@ -241,9 +265,7 @@ ${licenseInfo.badge}
 
 ## Badges
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+${languageBadge1} ${languageBadge2} ${languageBadge3} ${languageBadge4} ${languageBadge5} ${languageBadge6} ${languageBadge7}
 
 ## Features
 
@@ -270,9 +292,13 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 -${test2Instructions}
 
 -${test3Instructions}
+
+## Questions
+
+-If you have any questions regarding this or my other projects, my GitHub account is [${firstName}'s GitHub account] (https://github.com/${githubUsername}).
 ---`;
 
-    await fs.promises.writeFile("README.md", readMe());
+    await fs.promises.writeFile("./generated_README/README.md", readMe());
   } catch (err) {
     console.log(err);
   }
