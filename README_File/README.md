@@ -23,6 +23,9 @@
 - Here is an example of the completed README:
 ![The README complete with formatting, etc.:](./example/README_Image.png)
 
+- Here is a video showcasing the functionality of the completed project:
+[Showcase video:](https://drive.google.com/file/d/15p50V6SjGhFqTHvcMuiwrvaysX2yTMHm/view)
+
 ## Credits
 -This website was coded by Dylan Storm Johnson.
 
