@@ -56,6 +56,11 @@ const init = async () => {
         message: "Give a short description of the image.",
       },
       {
+        name: "videoURL",
+        type: "input",
+        message: "Is there is a showcase video for this project? (No or Google Drive URL)",
+      },
+      {
         name: "motivation",
         type: "input",
         message: "I was motivated to build this project...",
@@ -136,6 +141,11 @@ const init = async () => {
         type: "input",
         message: "List instructions on how conduct the third test on your project.",
       },
+      {
+        name: "tutor",
+        type: "input",
+        message: "Which tutor(s) helped you with this project? [List his/her name(s)]",
+      },
     ]);
 
     // console.log(data);
@@ -152,6 +162,7 @@ const init = async () => {
       imageName,
       imageFileType,
       imageDescription,
+      videoURL,
       motivation,
       why,
       problemSolved,
@@ -168,6 +179,7 @@ const init = async () => {
       test1Instructions,
       test2Instructions,
       test3Instructions,
+      tutor,
     } = data;
 
     // if (license === "Apache License 2.0 (Communal work)") {
@@ -224,6 +236,32 @@ const init = async () => {
       }
     }
 
+    var howToHelp = '';
+    var aidingTutors = '';
+
+    if (contributionGuidelines === "N/A") {
+      howToHelp = "This project has reached completion and no further help is necessary.  If you would like to expand on the idea, you are welcome to download a fork of the repository and work on your own version.";
+    } else {
+      howToHelp = contributionGuidelines;
+    }
+
+    if (tutor === "None") {
+      aidingTutors = "";
+    } else {
+      aidingTutors = `
+
+- While working on this project, I was aided by a tutor, ${tutor}, who assisted with bug solving, code refinement, and expanding on the concept.`;
+    }
+
+    if (videoURL === "No") {
+      googleDriveURL = "";
+    } else {
+      googleDriveURL = `
+
+- Here is a video showcasing the functionality of the completed project:
+![Showcase video:](${videoURL})`
+    }
+
     const readMe = () => `# <${title}>
 
 ${licenseInfo.badge}
@@ -238,6 +276,11 @@ ${licenseInfo.badge}
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Badges](#badges)
+- [Features](#features)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -248,21 +291,21 @@ ${licenseInfo.badge}
 -${usage}
 
 - Here is an image of the completed project:
-![${imageDescription}](assets/images/${imageName}.${imageFileType})
+![${imageDescription}](assets/images/${imageName}.${imageFileType})${googleDriveURL}
 
 
 ## Credits
--This website was coded by ${firstName} ${middleName} ${surname}.
+- This website was coded by ${firstName} ${middleName} ${surname}.${aidingTutors}
 
--List your collaborators, if any, with links to their GitHub profiles.
+- List your collaborators, if any, with links to their GitHub profiles.
 
--If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+- If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
--If you followed tutorials, include links to those here as well.
+- If you followed tutorials, include links to those here as well.
 
 ## License
 
--This project is listed under the ${licenseInfo.title}.  Under this license, ${licenseInfo.description}
+- This project is listed under the ${licenseInfo.title}.  Under this license, ${licenseInfo.description}
 
 ## Badges
 
@@ -270,29 +313,29 @@ ${languageBadge1} ${languageBadge2} ${languageBadge3} ${languageBadge4} ${langua
 
 ## Features
 
--${featureOne}
+- ${featureOne}
 
--${featureTwo}
+- ${featureTwo}
 
--${featureThree}
+- ${featureThree}
 
--${featureFour}
+- ${featureFour}
 
--${featureFive}
+- ${featureFive}
 
 ## How to Contribute
 
--${contributionGuidelines}
+- ${howToHelp}
 
 -Aside from the aforementioned ways you can contribute, the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard for contribution policy.  (Please use the above guidelines for contribution and consult the Contributor Covenant on things not specified.)
 
 ## Tests
 
--${test1Instructions}
+- ${test1Instructions}
 
--${test2Instructions}
+- ${test2Instructions}
 
--${test3Instructions}
+- ${test3Instructions}
 
 ## Questions
 
