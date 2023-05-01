@@ -259,7 +259,7 @@ const init = async () => {
       googleDriveURL = `
 
 - Here is a video showcasing the functionality of the completed project:
-![Showcase video:](${videoURL})`
+[Showcase video:](${videoURL})`
     }
 
     const readMe = () => `# <${title}>
