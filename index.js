@@ -288,7 +288,7 @@ ${licenseInfo.badge}
 
 ## Usage
 
--${usage}
+- ${usage}
 
 - Here is an image of the completed project:
 ![${imageDescription}](assets/images/${imageName}.${imageFileType})${googleDriveURL}
@@ -327,7 +327,7 @@ ${languageBadge1} ${languageBadge2} ${languageBadge3} ${languageBadge4} ${langua
 
 - ${howToHelp}
 
--Aside from the aforementioned ways you can contribute, the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard for contribution policy.  (Please use the above guidelines for contribution and consult the Contributor Covenant on things not specified.)
+- Aside from the aforementioned ways you can contribute, the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard for contribution policy.  (Please use the above guidelines for contribution and consult the Contributor Covenant on things not specified.)
 
 ## Tests
 
@@ -339,7 +339,7 @@ ${languageBadge1} ${languageBadge2} ${languageBadge3} ${languageBadge4} ${langua
 
 ## Questions
 
--If you have any questions regarding this or my other projects, my GitHub account is [${firstName}'s GitHub account] (https://github.com/${githubUsername}).
+- If you have any questions regarding this or my other projects, my GitHub account is [${firstName}'s GitHub account] (https://github.com/${githubUsername}).
 ---`;
 
     await fs.promises.writeFile("./generated_README/README.md", readMe());
